@@ -1,0 +1,59 @@
+\documentclass[10pt, a4paper]{article}
+
+\begin{document}
+	\section{Lezione 4, 12 Marzo 2018}
+	
+	Avevamo calcolato nello schema on campo semiclassico le probabilità di assorbimento, $ W_{if},\ \ket{i}\to\ket{f} $. Avevamo visto che questo coincide con la probabilità di emissione stimolata. I fenomeni sono di incidenza di un fotone che induce un salto di livello e di emissione stimolata in cui il fotone arriva, e ne vengono emessi due (alla stessa frequenza). Naturalmente siamo in condizioni di risonanza per adempiere alla regola d'oro di Fermi. La probabilità di emisione è proporzionale alla densità spettrale di energia incidente. Ossia l'energia per unità di volume e intervallo unitario di tempo (in questo caso di frequenza) della radiazione elettromagnetica. 
+	\begin{gather*}
+	\dfrac{\omega_{if}}{2\pi}=\nu_{if}=\dfrac{\abs{E_{f}-E_{i}}}{\hbar}
+	\end{gather*}
+	Avevamo visto che il coefficiente di assorbimento, è che è una proprietà del sistema è definita in modo che:
+	\begin{gather*}
+	W_{if}=B_{if}\rho(E)
+	\end{gather*}
+	Dove l'informazione sul sistema è \emph{encoded} nella matrice $ B_{ij} $ mentre quella del sistema nella densità di energia. Se succede inoltre che 
+	\begin{gather*}
+	\lambda_{if}>>a_{0}\ \text{lunghezza tipica del sistema}
+	\end{gather*}
+	Si può fare l'approssimazione di dipolo in cui il coefficiente di assorbimento è proporzionale al modulo quadro dell'elemento di matrice tra lo stato iniziale e quello finale del campo elettrico  scalare la posiione. Avevamo fatto i passaggi necessari per dimostrare questa espressione. In particolare avevamo trovato che, in approssimazione di dipolo:
+	\begin{gather*}
+	B_{if}=\dfrac{\pi}{3\varepsilon_{0}\hbar}\rho(\hbar\omega_{if})\abs{\bra{i}q\vec{r}\ket{f}}^{2}
+	\end{gather*}
+	L'elemento di matrice si chiama operatore di dipolo e si indica anche con $ \vec{d} $. Avevamo visto che questo è quindi il coefficiente di assorbimento e di emissione stimolata. Avevamo visto che l'emissione spontanea che non si ottiene con processi semiclassici, è compunque dipendente da questi coefficienti nel seguente modo:
+	\begin{gather*}
+	A_{if}=\dfrac{\left(\hbar\omega_{if}\right)^{3}}{\hbar^{3}\pi^{2}c^{2}}B_{if}
+	\end{gather*}
+	La probabilità di emissione spontanea è crescente con il salto energetico (infatti dipende dal suo cubo).
+	
+	Si hanno le regole di selezione del dipolo elettrico:
+	\begin{gather*}
+	\abs{\bra{i}\vec{d}\ket{f}}^{2}\neq 0 \iff \begin{cases}
+	\Delta l = \pm 1 \\
+	\Delta m = 0,\ \pm 1
+	\end{cases}
+	\end{gather*}
+	Questo deriva dal fatto che ci deve esere ovrapposizione della parte radiale. Se queste fossero in zone di spazio diverse  allora non ci sarebbe probabilità di transizione. L'elemento di matrice del dipolo è tanto maggiore quanto è maggiore la sovrapposizione della nuvola elettronia. Per esempio tra $ n=1 $ e $ n=2 $ l'elemento sarà più grande che tra $ n=1 $ e $ n=10 $. L'integrale da calcolare in toto è:
+	\begin{gather*}
+	\bra{n_{i},l_{i},m_{i}}\abs{r}\dfrac{\vec{r}}{\abs{r}}\ket{n_{f},l_{f},m_{f}}= \int dr R_{n_{i},l_{i},m_{i}}^{\dagger}\abs{r}R_{n_{f},l_{f},m_{f}}\int d\Omega Y_{l_{i},m_{i}}^{\dagger}\dfrac{\vec{r}}{\abs{r}}Y_{l_{f},m_{f}}
+	\end{gather*}
+	Dall'ultimo termine saltano fuori le regole di selezione. (Rappresentazione grafica delle transizioni permesse fino al terzo livello energetico). Con l'introduzione del campo elettromagnetico si spezza la simmetria sferica e l'energia può dipendere anche dal momento angolare in $ l $ ed $ m $. 
+	
+	Incominciamo ora ad includere nel nostro discorso lo spin. Questo è un momento angolare intrinseco alle particelle. Gli elettrroni, protoni, e neutroni hanno spin uguale ad un mezzo. È nota la meccanioca degli autovalori. Uno deve considerare il momento angolare totale ottenuto dalla somma del termine spinoriale e orbitale. Sono note anche le regole di composizione dei momenti angolari quantistici. Ci furono molti esperimenti che evidenziarono l'esistenza dello spin. L'esperimento tipico è quello di stern gerlach. In questo esperimento si fa passare il fascio elettronico in un campo magnetico non omogeneo e si studiava come questo si divideva. Altri esperimenti possibili sono di spettroscopia, in cui si studiano le transizioni. Si trova che ci sono degli splitting ad energia molto vicina tra loro. Negli spettri del visibile, per elementi con un elettrone molto esterno ed altri interni molto legati, l'elettrone vede una carica che sostanzialmente è $ +1 $ perché l'altr carica viene schermata. Questi metalli, alcalini, hanno un potenziale simile a quello coulombiano. Si vede la transizione, simile a quella di prima per questo elettrone più esterno. Inoltre per questa si vede che c'è uno splitting delle linee di transizione, con righe ad energie molto vicine tra di loro. Questo effetto è dovuto all'interazione spin-orbita. Questa interazione è un effetto relativistico che si manifesta nell'Hamiltoniana come un termine dipendente dal prodotto scalare del momento angolare con lo spin. Questo ha un coefficiente positivo, dunque se il momento angolare e lo spin sono diretti parallelamente allora l'energia è maggiore mentre se sono diretti antiparallelamente ha energia minore.  
+	L'esperimento di Stern Gerlach inizialmente non fu visto come manifestante la presenza di Spin, bensi di un momento magnetico intrinseco dell'atomo. Questo infatti è presente, e può essere generato sia dal momento angolare orbitale che di quello spinoriale. La costante di proporzionalità tra momento angolare e quello magnetico è diversa a seconda dei due casi, in più quello di spin differisce tra particella e particella. Per quanto riguarda quello orbitale la relazione quantistica è uguale a quella classica. Se uno costruisce una spira percorsa da corrente ottiene:
+	\begin{gather*}
+		\vec{\mu}=IA\vec{n}
+	\end{gather*}
+	Dove $ \vec{n}\perp $ all'area della spira. Scrivendo $ I=\frac{q}{2\pi r} $ si ottiene dunque
+	\begin{gather*}
+		\vec{\mu}=\dfrac{qvr}{2}\vec{n}=\dfrac{q}{2m}\vec{l}
+	\end{gather*}
+	Si definisce una costante che si hciama il magnetone di Bohr: $ \mu_{B}=\hbar\frac{\abs{q_{e}}}{2m}=\SI{9.27e-29}{\joule\tesla^{-1}} $
+	da cui:
+	\begin{gather*}
+	\vec{\mu}=-\mu_{B}\left(\dfrac{\vec{l}}{\hbar}\right)
+	\end{gather*}
+	In un fascio dunque uno calcola la deflessione con la seguente formula:
+	\begin{gather*}
+	F_{z}=\mu\derp[]{B}{z} \implies \expval{F_{z}}=\expval{\mu_{z}}\derp[]{B}{z}=-\mu_{B}\dfrac{\expval{l_{z}}}{\hbar}
+	\end{gather*}
+\end{document}

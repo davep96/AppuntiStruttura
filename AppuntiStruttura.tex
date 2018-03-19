@@ -1,0 +1,84 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{subfiles}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{bbold}
+
+\usepackage[margin=1.00in]{geometry}
+\usepackage{lmodern}
+
+%Ambienti matematici
+
+\theoremstyle{plain} 
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{cor}{Corollario}[teo]
+\newtheorem{lem}[teo]{Lemma}
+\newtheorem{prop}[teo]{Proposizione} 
+\newtheorem{post}{Postulato}
+\renewcommand\thepost{\Roman{post}}
+
+\newtheorem*{post*}{Postulato}
+
+\theoremstyle{definition} 
+\newtheorem{defn}{Definizione}
+\newtheorem{nb}{Importante}[subsection]
+
+\theoremstyle{remark} 
+\newtheorem*{oss}{Osservazione} 
+\newtheorem{ese}{Esempio}
+
+\newtheorem*{exe}{Excercise}
+\newtheorem*{sol}{Solution}
+
+
+%Simboli insiemistici
+
+\DeclareMathOperator{\R}{\mathbb{R}}
+
+\DeclareMathOperator{\C}{\mathbb{C}}
+
+\DeclareMathOperator{\N}{\mathbb{N}}
+
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+
+\DeclareMathOperator{\K}{\mathbb{K}}
+
+\DeclareMathOperator{\id}{\mathbb{1}}
+
+\newcommand{\scal}[2]{\ensuremath{\left<#1,#2\right>}}
+\newcommand{\parp}[2]{\ensuremath{\left\{#1,#2\right\}}}
+\newcommand{\com}[2]{\ensuremath{\left[#1,#2\right]}}
+\newcommand{\der}[3][]{\ensuremath{\dfrac{d^{#1}#2}{d#3^{#1}}}}
+\newcommand{\derp}[3][]{\ensuremath{\dfrac{\partial^{#1}#2}{\partial#3^{#1}}}}
+\newcommand{\prob}[1]{\ensuremath{\mathcal{P}\left[#1\right]}}
+\renewcommand{\mod}[1]{\ensuremath{\left|#1\right|}}
+
+\newcommand{\wave}[1]{\ensuremath{\Psi_{#1}}}
+\newcommand{\hilb}{\ensuremath{\mathcal{H}}}
+\newcommand{\chem}[1]{\ensuremath{\text{#1}}}
+
+\begin{document}
+
+	\begin{titlepage}
+		\title{ Appunti di Struttura della Materia}
+		\author{Davide Passaro}
+		\date{Anno scolastico 2017-2018}
+	\end{titlepage}
+	\maketitle
+	\subfile{SubFiles/Lezione3.tex}
+	\subfile{SubFiles/Lezione4.tex}
+	\subfile{SubFiles/Lezione5.tex}
+	\subfile{SubFiles/Lezione6.tex}	
+	\subfile{SubFiles/Lezione7.tex}
+\end{document}

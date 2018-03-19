@@ -1,0 +1,85 @@
+\documentclass[../AppuntiStruttura.tex]{subfiles}
+
+\begin{document}
+	\section{Lezione 3, 8 Marzo 2018}
+	
+	Avevamo visto l'interpretazione della parte radiale della funzione d'onda. Avviamo visto lo spettro degli autovalori, che utilizando la costante di Hartree è
+	\begin{gather*}
+	E_N=-\left(\dfrac{\mu}{m_e}\right)\dfrac{E_{Ha}}{2}\left(\dfrac{Z}{N}\right)^{2}
+	\end{gather*}
+	Dove $ \mu $ è la correzione di massa ridotta. Si ricorda che $ E_{Ha}=\frac{...}{...} $. La formula può semplificarsi ancora con l'ausilio della costante del raggio di Bohr. Quando uno va a vedere la forma della funzione d'onda trova i limiti posibili su $ m $ e $ l $ ad un $ n $ fissato. Nella base della posizione si ha dunque:
+	\begin{gather*}
+	\braket{\vec{r}}{nlm}=R_{nl}(r)Y_{nlm}(\theta,\phi)
+	\end{gather*}
+	La $ Y_{lm} $ è l'armonca sferica. Si identificano anche con lettere i valori di $ l $. In ordine da zero sono $ s,p,d,f,g,h\dots $. Se uno disegnasse le parti radiali, trova che per $ l=0(=s) $ la parte radiale allo zero va ad un valore costante. Parte da un valore finito e decresce esponenzialmente. Mentre per $ n=1,\ l=1 $ questa ha un nodo, dovuto alla parte di momento angolare ma l'andamento all'origine e all'infinito rimane invariato. Per $ n=2 $ invece parte dall'origine con il valore zero, e questo costituisce il nodo, ale e poi scende esoponenzialmente a zero all'infinito. Nello stato $ 1s $ il modulo quadro della funzione d'onda ha un picco preciso che indica il luogo in cui è più probabile trovare l'elettrone. Nel caso dell'orbitae $ 2s $ i massimi sono due. Avendo le parti radiali in forma analitica uno può anche chiedersi quanto valgono i valori medi di osservabili comuni. Per esempio si possono calcolare i valori medi del raggio elevato a esponenti interi, del potenziale e dell'energia cinetica. La relazione tra il valor medio dell'energia cinetica e del potenziale possono trovarsi con il teorema del viriale. A partire dalle armoniche sferiche espresse su $ z $ è anche possibile trovare quelle espresse sugli altri assi prendendone combinazioni lineari. Per esempio:
+	\begin{gather*}
+	\wave{2p_x}=\dfrac{1}{\sqrt{2}}\left(Y_{211}+Y_{21-1}\right) \\
+	\wave{2p_y}=\dfrac{1}{\sqrt{2}}\left(Y_{211}-Y_{21-1}\right)
+	\end{gather*}
+	Questi sono ancora autovettori di $ L^2 $ ma non di $ L_z $ perché mischiano autovettori diversi di $ L_{z} $.
+	\begin{exe}
+		Vediamo un esempio di un atomo "esotico" di idrogeno, ossia un atomo d'idrogeno con un muone al posto che un elettrone. Ricordiamo che il muone ha la stessa carica dell'elettrone ma mazza oltre duecento volte maggiore. Sappiamo che nell'idrogeno normale, il raggio è di circa mezzo Angstrom (è il raggio di Bohr). La massa ridotta dell'idrogeno è circa uguale alla massa dell'elettrone (perché la massa del protone è molto più grande). Questo non è vero nel caso del muone, mentre si è più piccola non di molto. La massa ridotta viene circa 186 volte la massa dell'elettrone. L'energia per $ n=1,\ l=0 $ è direttamente proporzionale alla massa ridotta. L'energia è dunqe 186 volte più negativa. Quindi è molto più laegato. La disatanza media è invece inversamente proporzionale alla massa ridotta. Questa è quindi 186 volte più piccola che nel caso dell'elettrone. Un altro esempio in cui questo è importante è il positronio, uno stato legato di elettrone e positrone. Si può produrre (ha un tempo di vita molto piccolo). La massa ridotta è la metà di quella dell'elettrone.
+		\end{exe}
+		Per il calcolo della probabilità di transizione in approssimazione di dipolo si parte sempre dalla regola d'oro di Fermi:
+		\begin{gather*}
+		W_{if}=\dfrac{2\pi}{\hbar}\abs{\bra{i}{H_{per}}\ket{f}}^2\delta(E_f-E_{i}\pm\hbar\omega)
+		\end{gather*}
+		L'hamiltoniana cmavia in conseguenza alla presenza del potenziale elettromagnetico, e diventa:
+		\begin{gather*}
+		H=\dfrac{\left(p-qA\right)^2}{2m}+V(r)\implies H=\dfrac{p^{2}}{2m}+\dfrac{qA^2}{2m}-\dfrac{q}{2m}\left(\scal{p}{A}+\scal{A}{p}\right)+V(r)+q\Phi
+		\end{gather*}
+		Si ha inoltre che:
+		\begin{gather*}
+		\comm{p}{A}=-i\hbar\div A
+		\end{gather*}
+		$A $ è un oggetto vettoriale che dipende da $ r $ e dal tempo. Si può scrivere in trasformatra di fourier in dunzione di omega e k. Si  ha quindi:
+		\begin{gather*}
+		A=\int d\omega \int d^3xA(k,\omega)e^{ik\scal{k}{r}}e^{-i\omega t}
+		\end{gather*}
+		Queste si considerano quindi per le singole frequenze:
+		\begin{gather*}
+		H_{per}=-\dfrac{q}{m}\vec{A}(e^{-i\omega t}e^{ikr})\vec{p}
+		\end{gather*}
+		A causa della delta di dirac nella regola d'oro di Fermi possiamo considerare solo le frequenzi che siano risosnanti con il $ \Delta E $. Una volta nota $ \Delta E $ è quindi nota la hamiltoniana perturbata. Un fattore ce ancora disturba è l'esponenziale $ ikr $. Qui interviene l'approssimazione di dipolo si scrive: $ e^{ikr}=1+ikr+\dots $. Il trucco è ricordarsi che per un  ampo elettromagnetico, nel caso dei fotoni, sappiamo che la lunghezza d'onda corrispondente ad un $ \hbar\omega\approx 1eV $ la lunghezza d'onda è circa uguale a $ 10^{3} $ angstrom. Le transizioni che ci interessano sono associate ad assorbmento e rilascio di fotoni tipicamente nel visibile ma anche UV. Se la lunghezza d'onda è dell'ordine descritto prima possiamo dire che:
+		\begin{gather*}
+		\scal{k}{r}\approx \dfrac{2\pi}{\lambda}a_{0}<<1
+		\end{gather*} 
+		Quindi la lunghezza d'onda della perturbazione è molto più grande della dimensione del sistema. Quindi sulla scala delle dimensioni del sistema, grossomodo la perturbazione è costante (nella scala delle lunghezze, non il tempo). Quindi posso buttare via tutto e considerare $ e^{i\scal{k}{r}}\approx1 $. Se guardo il campo magnetico, trascurando le variazioni spaziali, così sto dicendo che trascuro tutti gli effetti magnetici, e dico che $ \vec{\nabla}\wedge\vec{A}\approx
+		 0 $. Questa approssimazione è nota come approssimazione di dipolo elettroco. Se si aggiunge il primo termine dell'esponenziale si chiama quadripolo elettrico e dipolo magnetico. In tutto con questa apprssimazione abbiamo trovato che:
+		 \begin{gather*}
+		 H_{per}=-\dfrac{q}{m}\scal{\vec{A}}{\vec{p}}\implies \bra{i}H_{per}\ket{f}=-\dfrac{q}{m}\vec{A}\bra{i}\vec{p}\ket{f}.
+		 \end{gather*}
+		 Posso ancora esprimere il campo elettrico come derivata nel tempo di $ E$. Così:
+		 \begin{gather*}
+		 E=-\derp[]{A}{t},\quad E_{0}=i\omega A_{0}
+		 \end{gather*}
+		 Si può anche semplificare il valor medio di $ p $, ricordando che:
+		 \begin{gather*}
+		 \vec{p}= \dfrac{m}{i\hbar}\comm{\vec{r}}{H}
+		 \end{gather*}
+		 Da cui si può scrivere:
+		 \begin{gather*}
+		 \bra{i}\vec{p}\ket{f}=\dfrac{m}{i\hbar}\left(E_{i}-E_{f}\right)\bra{i}r\ket{f}
+		 \end{gather*}
+		 Risostitueno tutto si trova che la probabilità di transizione è:
+		 \begin{gather*}
+		 W_{if}=\dfrac{2\pi}{\hbar}\abs{\vec{E}_{0}\bra{i}q\vec{r}\ket{f}}^{2}\delta(...)
+		 \end{gather*}
+		 Posso anche tirar fuori il campo elettrico indicandolo come prodotto per il modulo e il versore di polarizzazione. Risulta comodo tirare fuori il modulo del campo elettico perchè si può mettere insieme alla delta a formare la densità di aenergia del campo che è definita come:
+		 \begin{gather*}
+		 \rho(E):=2\varepsilon_{0}\abs{E_{0}}^{2}\delta(E-(E_{i}-E_{f})), \quad (E_{i}-E_{f})=\hbar\omega
+		 \end{gather*}
+		 In termini di questa densità si ha che la probablità di transizione è uguale a 
+		 \begin{gather*}
+		 W_{if}=\dfrac{\pi}{\varepsilon_0\hbar}\rho(\hbar\omega)\abs{\vec{\tau}\bra{i}\vec{d}\ket{f}}^{2}
+		 \end{gather*}
+		 Di solito uno non ha modo di scegliere la polarizzazione e dunque è cotretto a mediare $ \vec{\tau} $ su tutte le direzioni. Si ha $ \vec{\tau}\bra{i}\vec{d}\ket{f}=\abs{\bra{i}\vec{d}\ket{f}}\cos\theta $. Da cui: $ \int_{\Omega}d\Omega \cos(\theta)^{2}=\dfrac{1}{3} $. Da cui:
+		 \begin{gather*}
+		 		 W_{if}=\dfrac{\pi}{3\varepsilon_0\hbar}\rho(\hbar\omega)\abs{\bra{i}\vec{d}\ket{f}}^{2}
+		 \end{gather*}
+		 Il coefficiente in modulo quadro dipende solo dal sistema mentre la densità dipende solo dal campo estrerno. SI può fare questa separazione. Il coefficiente dipenente dal sistema è detto coefficiente di assorbimento (o di emissione nel caso sia stimolata).
+		 \begin{gather*}
+		 B_{if}:=\dfrac{\pi}{3\varepsilon_0\hbar}\abs{\bra{i}\vec{d}\ket{f}}^{2}
+		 \end{gather*}
+		 Si vedrà poi come questo coincida con quello di emissione stimolata.
+\end{document}

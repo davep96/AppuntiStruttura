@@ -1,0 +1,38 @@
+\documentclass[../AppuntiStruttura]{subfiles}
+
+
+\begin{document}
+	\section{Lezione 7, 19 Marzo 2018}
+	Gli argomenti di oggi copriranno la correzione relativistica all'energia cinetica e lo spettro degli atomi idrogenoidi in presenza di campo magnetico. Siamo quindi nell'ambito della struttura fine e successivamente iperfine dell'atomo di idrogeno. Abbiamo visto l'introduzione del termine di correzione spin orbita, e abbiamo visto come questa è una correzione relativistica (che si può vedere anche dal termine moltiplicativo inversamente proporzionale al quadrato della velocità della luce). Vediamo ora la correzione relativistica ad un altro termine, quello cinetico. Quello che facciamo è esprimere l'energia cinetica nell'ambito della relatività ristretta. Possiamo considerare l'energia totale, che si può scrivere come energia a riposo più in contributo cinetico. Si può dimostrare che questa può essere scritta come:
+	\begin{gather}
+		K=\sqrt{\mu_{0}^{2}c^{4}+p^{2}c^{2}}-\mu c^{2}
+	\end{gather}
+	La massa nella formula è la massa relativistica si ha che, con $ p=\mu v=\gamma\mu_{0}v $:
+	\begin{gather}
+		\sqrt{\mu_{0}^{2}c^{4}+p^{2}c^{2}}=\sqrt{\mu_{0}^{2}c^{4}+\left(\gamma\mu_{0}v\right)^{2}c^{2}}
+	\end{gather}
+	Facendo lo sviluppo di taylor dell'energia in $ \frac{1}{c^{2}} $ si ha, all'ordine zero l'espressione classica dell'energia, mentre al primo ordine si ha la correzione relativistica:
+	\begin{gather}
+		K=\mu_{0}c^{2}\left(1+\dfrac{1}{2}\dfrac{p^{2}}{\mu^{2}c^{2}}-\dfrac{1}{8}\dfrac{p^{2}}{\mu_{0}^{4}c^{4}}+\dots-1\right)
+	\end{gather}
+	Bisogna calcolare quindi, in tutt l'elemento di matrice:
+	\begin{gather}
+	\bra{n,l}\dfrac{p^{2}}{8\mu^{3}c^{2}}\ket{n,l}=\dots=-E_{n}^{0}\dfrac{Z^{2}\alpha^{2}}{n^{2}}\left(\dfrac{3}{4}-\dfrac{n}{l+\frac{1}{2}}\right)\left(\dfrac{\mu_{0}}{m_{e}}\right)^{3}
+	\end{gather}
+	Quest'ultima espressione è dipendente dall'energia imperturbata dell'atomo di idrogeno. Gli stati imperturbati non sono tuttavia autostati dell'operatore $ p^{4} $ ma noi ci limitiamo al calcolo di elementi diagonali. Il bra e il ket sono lo stesso stato perché sono i termini più rilevanti nello sviluppo perturbativo. Infatti i termini correttivi sono tanto più piccoli quanto più grandi quanto maggiore è la differenza tra i valori di energia. Il valore di aspettazione di questi è trascurabile rispetto al contributo degli operatori sulla diagonale. Vediamo che è una correzione all'energia proporzionale a $ \alpha^{2} $ con un  $ c $ al denominatore quindi va al secondo ordine nella correzione relativistica. Poiché è dello stesso ordine della correzione spin orbita non va trascurato. Tipicamente, l'interazione spin orbita genera però uno splitting quindi ha un effetto maggiore. Questo termine di correzione rappresenta solo uno shifting dei livelli, senza disturbare troppo il sistema. Nel caso di atomi idrogenoidi però la situazione diventa più interessante?. Consideriamo adesso la hamiltoniana relativistica (non propriamente vanno altri termini che aggiungeremo dopo). Questa è data da:
+	\begin{gather}
+		H_{rel}=H_{S-O}-\dfrac{p^{4}}{8\mu^{3}c^{2}}
+	\end{gather}
+	Si ha che:
+	\begin{gather}
+	\label{eqn:corrreleig}
+	\bra{nlj}H_{rel}\ket{nlj}=-\dfrac{Z^{4}\alpha^{2}}{n^{3}}E_{Ha}\left(\dfrac{\mu_{0}}{m_{e}}\right)^{3}\left(\dfrac{1}{2j+1}-\dfrac{3}{8n}\right)
+	\end{gather}
+	Abbiamo incluso una correzione relativistica all'energia cinetica che vale a tutti i livelli ma l'abbiamo costruita solo per gli stati con $ l\neq0 $. Si può dimostrare che questa correzione vale anche per il caso $ l=0 $. Questo però è valido solamente aggiungendo il termine correttivo:
+	\begin{gather}
+	H_{D}=\text{Costante}\delta(\vec{r})
+	\end{gather}
+	La costante si trova sul libro. Il valore di aspettazione è dunque proporzionale al modulo quadro della funzione d'onda nello zero. Questo, per $ l\neq0 $ è nullo. Si ha quindi che per $ l\neq0 $ questo termine è ininfluente. In conclusione l'espresione \ref{eqn:correleig} è valida per ogni $ l $ ma si trovai in modo diverso a seconda del caso di $ l=0 $ o $ l\neq 0 $. Si può dimostrare che questa è anche la soluzione dell'equazione di Dirac e quindi è corretta ad ogni ordine. Quello che ci aspettiamo è che due livelli con lo stesso $ j $ a parità di $ n $ hanno la stessa energia. 
+	
+	Questo fenomeno è noto come \emph{Lamb shift}. Tenendo conto delle regole di selezione è quindi possibile fare un grafico delle transizioni possibili con le corrispondenti linee.
+ \end{document}

@@ -1,0 +1,61 @@
+\documentclass[../AppuntiStruttura]{subfiles}
+
+
+\begin{document}
+	\section{Lezione 6, 15 Marzo 2018}
+	
+	Riassumendo finora abbiamo parlato del rapporto giromagnetico, la proporzionalità tra momento angolare e momento magnetico. Abbiamo visto che questo rapporto può essere diverso a seconda dei casi. Rispecchia il caso classico. Abbiamo visto che la costante di proporzionalità nel caso del momento magnetico orbitale è il magnetone di Bohr. 
+	\begin{gather*}
+		\vec{\mu}_l=\mu_{B}\dfrac{\vec{l}}{\hbar}
+	\end{gather*}
+	dove si ha che il magnetone di Bohr è uguale a: $ \mu_{B}=\frac{\hbar q_{e}}{2m_{e}} $. Se generaliziamo questa idea del rapporto giromagnetico al momento angolare totale. In generale uno può dire che il momento magnetico spin genrato è:
+	\begin{gather*}
+	\mu_{spin}=-g_{s}\mu_{B}\dfrac{\vec{s}}{\hbar}
+	\end{gather*}
+	Nel caso dell'elettrone per esempio il coefficiente $ g_s=2 $. Sempre in questo caso, gli autovalori del momento magnetico possono essere dunque:
+	\begin{gather*}                              \expval{\mu_{spin_{e},z}}=-2\mu_{B}\dfrac{\expval{s_z}}{\hbar}=\pm \mu_{B} 
+	\end{gather*} 
+	In generale quindi la funzione d'onda sarà esprimibile come prodotto dii due termini, la parte orbitale e la parte spinoriale:
+	\begin{gather*}
+	\psi_{e}(\vec{r},\vec{s})=R_{nl}(\vec{r})Y_{lm}\left(\theta,\varphi\right)\chi_{spin}(s,m_{s})=\ket{nlm_{z}sm_{s}}
+	\end{gather*}
+	Avevamo anche detto che il grado di libertà di spin che non appare nell'hamiltoniana è semplicemente un grado di libertà in più. Può ssere matematicamente codificato coeme un prodotto tensoriale di spazi di hilber, a priori non ci sono alcune interazioni. Come effetto relativistico invece questa interazione è presente e si manifesta come un accoppiamento dello spin con i momenti angolari orbitali. Nella trattazione classica si considera il sistema di riferimento dell'elettrone e si considera il moto del nucleo come generante una corrente. Questa causa un momento magnetico che interagisce con l'elettrone. Il problema di questa trattazzone è che il sistema di riferimento dell'elettrone non è uuno inerziale. Facendo correttamente i calcoli viene lo stesso risultato a meno di un fattore moltiplicativo di un mezzo. La trattazione coi calcoli è sul libro. Dunque il termine di interazione di spin-orbita da aggiungere è:
+	\begin{gather*}
+		U=-\scal{\vec{\mu}_{s}}{\vec{B}}=\xi(r)\dfrac{\scal{\vec{l}}{\vec{s}}}{\hbar^{2}}
+	\end{gather*}
+	Dove $ \xi(r) $ è una funzione dipendente dal potenziale. La sua forma generale è nota ma non sempre si può utilizzare. Ne caso della forza di coulomb si ha:
+	\begin{gather*}
+		\xi(r)=\dfrac{Ze^{2}\hbar^{2}}{2m_{e}^{2}c^{2}r^{3}}
+	\end{gather*}
+	L'hamiltoniana di spin orbita, a causa del prodotto tra $ l $ e $ s $ non commuta più con $ l_{z} $ e $ s_{z} $. Per quanto riguarda la parte radiale. Uno potrebbe cercare di valutare il valore medio di $ \frac{1}{r^{3}} $. Si può calcolare con la nota formula ricorsica e si trova che è proporzionale a $ Z^3 $. Moltiplicando per quanto si aveva prima viene che: $ \expval{H_{so}}\propto Z^4 $. Questo valor medio si vede che dipende ora anche da $ l $ infatti viene inversamente proporionale a $ n^3 $ e a $ l^{2} $. Per permettere la diagonalizzazione del termine di prodotti scalari passiamo adesso alla base dei momenti accoppiati. Trascuriamo in questo momento i termini non diagonali della interazione di spin orbita che colleghino $ n $ ed $ l $ diversi. Anche se presenti questi sono molto piccoli. Osserviamo che nella base accoppiata possiamo scrivere $ \scal{\vec{L}}{\vec{S}} $ come:
+	\begin{gather*}
+		\scal{\vec{L}}{\vec{S}}=\dfrac{\mod{J}^{2}-\mod{L}^{2}-\mod{S}^{2}}{2}
+	\end{gather*}
+	che nella base accoppiata è diagonale. Si ha quindi che:
+	\begin{gather*}
+	\bra{n,l,J,m_{j}}\dfrac{\scal{\vec{L}}{\vec{S}}}{\hbar^{2}}\ket{n',l',J',m_{j}}=\delta_{J,J'}\delta_{m_{j},m_{j}'}\dfrac{J(J+1)-S(S+1)-l(l+1)}{2}
+	\end{gather*}
+	Nel caso dell'elettrone in ccui $ S=\frac{1}{2} $, nell'atomo idrogenoide:
+	\begin{gather*}
+	J_{min}=l-\dfrac{1}{2},\implies J(J+1)=l^{2}-\dfrac{1}{4} \\ J_{max}=1+\dfrac{1}{2}\implies J(J+1)=l^{2}+2l+\dfrac{3}{4}
+	\end{gather*}
+	Si hanno quindi due possibili valori per $ J $. Si ha dunque in tutto:
+	\begin{gather*}
+	\Delta E = l \quad J=J_{min} \\
+	\Delta E = -(l+1) \quad J=J_{max}
+	\end{gather*}
+	Si trovano quindi due possibili valori per $ J $, quindi anche per l'energia. Se in assenza dello spin orbita l'energia è $ E^{0}_{nl} $ con degenerazione $ 2(l+1)\times 2 $ ($ \times 2 $ per la degenerazione di spin). Accendendo lo spin orbita il livello ciascun livello si splitta e diventa:
+	\begin{gather*}
+	E_{max}=E^{0}_{nl}+\dfrac{l}{2}\xi_{nl} \\
+	E_{min}=E^{0}_{nl}-\dfrac{(l+1)}{2}\xi_{nl}
+	\end{gather*}
+	Il la differenza tra i due valori è dunque:
+	\begin{gather*}
+		\Delta_{s-o}=\left(l+\dfrac{1}{2}\right)\xi_{nl}
+	\end{gather*}
+	In generale la notazione che si usa è quella spettroscopica in cui si indica il $ J $ dell'elettrone, e in generale glu stati elettronici con
+	\begin{gather*}
+	 ^{2S+1}L_{J}
+	\end{gather*}
+	Dove $ L=s,\ p,\ d,\ \dots $. Per un elettrone il termine in alto a sinistra è sempre uguale a 2. In generale questo rappresenta la molteplicità di spin. Nel caso in cui  $ L=p $ uno può pensare a delle rtansizioni a degli stati che sono più in basso. Per un atomo di idrogeno possiamo die che le transizioni $ 2p\to 1s $ possibili sono tali che abbiano $ \Delta l = 1 $ (questo deriva dal discorso dell'approssimazione di dipolo). Si vede dunque una riga singola. Accendendo ora lo spin orbita, lo stato $ 2p $ si splitta in due. Non c'è più quindi una sola transizione allo stato fondamentale ma ce ne sono due. La differenza tra gli stati splittati è molto più piccola di quella tra gli stati $ 2p $ e quello fondamentale. Guardando però con strumentazion ad alta risoluzione si nota che c'è uno splitting delle righe. I momenti angolari totali di questi stati sono, da quell ofondamentale in su: $ l=0, S=1/2, J=1/2 $, $ l=1, J=1/2, S=1/2 $ e $ l=1, S=1/2, J=3/2 $. La regola di selezione del dipolo elettrico ci dice che: $ \Delta J = 0, \pm 1 $ da cui tutte le transizioni di cui sopra sono permesse (c'è anche una condizione uguale su $ \Delta m_{j} $). Questo doppietto è molto ravvicinato nell'idrogeno, e inizialmente non è stato osservato. Invece questo fenomeno è molto più pronunciato nel sodio, dove si era osservato fin da subito. In generale lo splitting di questo doppietto è molto pronunciato per tutti gli atomi alcalini a causa della loro struttura elettronica. Nel caso del sodio, abbiamo $ Z=11 $, in prima approssimazione diciamo che abbiamo 10 elettroni più interni (con $ n=1,2 $) ed uno esterno che abbia $ n=3 $. Nel suo ground state l'elettrone più esterno del sodio sta nel $ 3s $. Si ha quindi uno schema analogo a questo dove la transizione non avviene più tra $ 2p\to 1s $ ma da $ 3p\to3s $. Poiché il potenziale non è più coulombiano infatti non è più degenere tra questi livelli. La differenza è di circa $ \SI{2}{\electronvolt} $. La transizione tra questi livelli è indotta da luce nel campo visibile (giallo). Ci si accorse però che non c''è una singola riga ma ce ne sono due: questo splitting è dovuto allo spin orbita. La differenza di energia tra i livelli è di circa $ \SI{2}{\milli\electronvolt} $. Ancora molto più piccola di quella tra $ 3p $ e $ 3s $ ma abbastanza grande da essere visibile co n uno spettrometro con una buona risoluzione. Questo fenomeno diventa più pronuciato man mano che si aumenta il momento angolare dello stato eccitato. SUpponiamo di prendere la transizioe che va dallo stato $ 3d  $. Lo stato $ 3d $ sarà diviso in $ J=5/2,\ 3/2 $. Le transizioni possibili, selezionate dalle regole di dipolo sono tra $ d_{5/2}\to p_{3/2} $,\ $ d_{3/2}\to p_{3/2} $ e $ d_{3/2}\to p_{1/2} $. Vedremo in seguito come l'inserzione di un campo magnetico influenza lo splitting, fenomeno noto come \emph{Lamb Shift}.
+\end{document}

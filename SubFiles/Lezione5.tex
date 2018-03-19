@@ -1,0 +1,65 @@
+\documentclass[../AppuntiStruttura.tex]{subfiles}
+
+\begin{document}
+\section{Lezione 5, 14 Marzo 2018}
+
+	\begin{exe}
+		Given a free electron with kinetic eenergy of $ T=\SI{4}{\electronvolt} $, meeting a stationaty $ \chem{He}^{2+} $ ion and decays einto the bound state emitting a photon of $ \SI{123.415}{\nano\meter} $. 
+		Question:
+		\begin{enumerate}
+			\item What is the principal quantum number $ n $ of the bound state of the electron? 
+			\item In the case that $ n>1 $ what is the energy and the wave number of the photon succequently emitted in the transition to a state $ n-1 $?
+		\end{enumerate}
+	\end{exe}
+	\begin{sol}
+		First we need to convert the photon energy from nanometers to electronVolts. We have:
+		\begin{gather}
+			\label{eqn:enlambda}
+			\Delta E = \dfrac{hc}{\lambda}=\SI{10.0461}{\electronvolt}
+		\end{gather}
+		Hence the ionization energy of the electron is $ \Delta E - T $. We have that the energy levels of the helium atom are:
+		\begin{gather}
+		\label{eqn:heen}
+		E_{n}^{\chem{He}^{2+}}=-Z^{2}\left(\dfrac{\mu}{m_{e}}\right)\dfrac{E_{Ha}}{2}\dfrac{1}{n^{2}}\dfrac{1}{n^{2}}
+		\end{gather}
+		With the ionization energy calculatef bobe we have: $ n=3 $. With \ref{eqn:heen} we can also calculate the difference in energy between the bounded states with $ n=3 $ and $ n=2 $ and using \ref{eqn:enlambda} get back the wavelength. Afterwards the wave quantum number is defined as the inverse of such quantity:
+		\begin{gather*}
+		N_\lambda=\dfrac{1}{\lambda}=\dots
+		\end{gather*}
+	\end{sol}
+	\begin{exe}
+		A photon ionizes a hydrogen atom from the ground state. The liberated electron recombines with a proton into the first excited state. In the process it emits a $ E_{p}=\SI{466}{\angstrom} $ photon.
+		\begin{enumerate}
+			\item What is the energy of the free electron?
+			\item What is the energy of the initial photon?
+		\end{enumerate}
+	\end{exe}
+	\begin{sol}
+		Using again equation \ref{eqn:enlambda} we can find the energy of the photon. From the equation of the hyrdogen atom energy we can find the energy of the first excited state. This is given by an equation analogous to \ref{eqn:heen}. The energy of the free electron is then:
+		\begin{gather}
+			k=\dfrac{-13.6}{2^{2}}+h\nu=23.6\si{\electronvolt}
+		\end{gather}
+		It is then easy o find the energy of the first incident photon.
+	\end{sol}
+	\begin{exe}
+		Show that when the recoil kinetic energy of the atom is taken into accoun the energy of the emitted photon in a transition between atomic leves, the energy difference is reduced by a factor approximately of
+		\begin{gather*}
+			1-\dfrac{\Delta E}{2mc^{2}}
+		\end{gather*}
+		Compare the wavelenfth of the light emitted from a hydrogen atom in the $ 3\to 1 $ transition when the recoil is taken into account and when it is not. 
+	\end{exe}
+	\begin{sol}
+		Before the emission we know that the energy of the atom is aqual to $ E_{a_{i}}=mc^{2}+E_{in} $ (where $ E_{in} $ is the initial energy). After emission we know that it is:
+		\begin{gather*}
+		E_{a_{f}}=\sqrt{m^{2}c^{4}+p^{2}c^{2}}+E_{fin}
+		\end{gather*}
+		The emitted photon energy is
+		\begin{gather*}
+			h\nu=E_{a_{f}}-E_{a_{i}}=\sqrt{m^{2}c^{4}+p^{2}c^{2}}+E_{fin}-\left(mc^{2}+E_{in}\right)
+		\end{gather*}
+		We know that the momentum of the photon is:
+		\begin{gather*}
+			p=\hbar k=\dfrac{h}{\lambda}=pc=h\nu 
+		\end{gather*}
+	\end{sol}
+\end{document}
