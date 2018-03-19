@@ -34,5 +34,29 @@
 	\end{gather}
 	La costante si trova sul libro. Il valore di aspettazione è dunque proporzionale al modulo quadro della funzione d'onda nello zero. Questo, per $ l\neq0 $ è nullo. Si ha quindi che per $ l\neq0 $ questo termine è ininfluente. In conclusione l'espresione \ref{eqn:correleig} è valida per ogni $ l $ ma si trovai in modo diverso a seconda del caso di $ l=0 $ o $ l\neq 0 $. Si può dimostrare che questa è anche la soluzione dell'equazione di Dirac e quindi è corretta ad ogni ordine. Quello che ci aspettiamo è che due livelli con lo stesso $ j $ a parità di $ n $ hanno la stessa energia. 
 	
-	Questo fenomeno è noto come \emph{Lamb shift}. Tenendo conto delle regole di selezione è quindi possibile fare un grafico delle transizioni possibili con le corrispondenti linee.
+	Tenendo conto delle regole di selezione è quindi possibile fare un grafico delle transizioni possibili con le corrispondenti linee. Per ottenere lo spettro sperimentalmente è necessario fare degli accorgimenti,  perché le linee sono sempre allargati. I motivi dell'allargamento sono già stati riportati. Per evitare gli allargamenti dovuti all'effetto doppler, che risulta essere maggiore della risoluzione necessaria per vedere alcuni degli splitting spin orbita.
+	
+	Risulta essere presente anche un altro termine di correzione, dovuto a fenomeni relativistici di fluttuazioni del campo elettromagnetico. Con questa correzione i risultati sperimentali coincidono meglio con la teoria. 
+	
+	Vediamo adesso cosa succede nel momento in cui rompiamo la simmetria sferica del problema e cerchiamo di estrarre più informazioni eliminando alcune delle degenerazion iancora presenti nel sistema. Si è visto che un certo approccio i livelli 3nergetici non dipendono da $ l $, poi con spin orbita dipendono anche da $ l $, successivamente non più da $ l $ ma da $ j $\dots. Rompiamo ora la simmetria sferica del sistema per far dipendere l'energia anche da $ l_{z} $. Questo in genere si fa inserendo un campo magnetico. Il momento magnetico atomico è dato dalla somma dei due contributi, di spin e orbitale. Di fatto sappiamo che:
+	\begin{gather}
+	\vec{\mu}=-\dfrac{\mu_{B}}{\hbar}\left(\vec{L}+2\vec{S}\right)
+	\end{gather}
+	Si ha quindi un contributo all'Hamiltoniana di:
+	\begin{gather}
+		H_{magn}=-\scal{\vec{B}}{\vec{\mu}}
+	\end{gather}
+	che rappresenta il contributo magnetico. Questo termine non è diagonale in $ \ket{l,s,j,m_{j}} $ ma lo è in $ \ket{l,s,m_{s},m_{s}} $. A seconda della scelta della base scelta possiamo calcolare o $ H_{magn} $ o $ H_{S-O} $.  Consideriamo ora i due casi, campo debole e campo forte. Nel caso di campo forte supponiamo di poter trascorare il termine di spin orbita. In questo caso, l'energia magnetica è data adll'espressione:
+	$$ E_{magn}=\bra{m_{l},m_{s}}H_{mang}\ket{m_{l},m_{s}} $$
+	Questi momenti angolari si allineerano al campo magnetico per dare un contributo il più piccolo possibile all'energia. Viceversa, quando il campo è debole, ossia quello che avviene normalmente, la situazione è diversa. I livelli sono determinati dall'interazione spin orbita e questi livelli saranno a loro volta splittati a causa della presenza del campo magnetico secondo le loro componenti dirette secondo la proiezione del momento angolare sulla direzione del campo. In questo casoi l $ j $ totale tende ad allinearsi. $ S $ e $ L $ hanno una loro posizione relativa fissata dalla loro interazione spin orbita e precedono attorno a $ J $. Quello che si può pensare è che in media nel tempo la direzione di $ L $ è parallela a $ J $ e stessa cosa vale anche per $ S $. Sostanzialmetne i momenti magnetici $ L,\ J,\ S $ sono in media diretti nella stessa direzione, quella del campo magnetico esterno $ B $. Il valore finale è:
+	\begin{gather}
+		E_{mang}\approx\expval{B}{j,m_{j}}=g_{l}\mu_{B}Bm_{j}
+	\end{gather}
+	dove $ g $ è il \emph{fattore di Landé}. Questo fattore è stato calcolato in classe ma non è riportato, la dimostrazione è sul libro. Si ha che:
+	\begin{gather}
+	g_{l}=1+\dfrac{j\left(j+1\right)+s\left(s+1\right)-l\left(l+1\right)}{2j\left(j+1\right)}
+	\end{gather}
+	Quindi questo termine magnetico è causa di un ulteriore splitting dovuto al numero quantico $ m_{j} $. Questo effetto è noto come effetto Zeeman. Nel caso di campi che tendono a zero gli spin orbita sono ben chiari, ma non c'è splitting di $ m_{j} $. Aumentando man mano il campo, questa singola lineaa viene splittata, rompendo la degenerazione. Per campi grandi questa separazione è netta. Inoltre pè anche possibile avere un overlapping che confonde i le linee spettrali appartenenti a valori di $ J $ totale differenti. 
+	
+	Passiamo ora ad introdurre i sistemi e nuclei a più particelle. Fino ad offi abbiamo visto un sistema che contiene un sistema ad un solo elettrone. Consideriamo ora il caso in cui ci siano pià elettroni. Il punto chiave per affrontare ed intepretare le evidenze perimentali e cosruire la teoria è il concetto di indistinguivilità delle particelle. Questa indistinguibilità, non è ovvia. Questo argomento è stato largamente affrontato nel corso di meccanica quantistica e quindi non verrà riportato in questo testo.
  \end{document}
