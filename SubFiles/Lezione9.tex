@@ -1,0 +1,35 @@
+\documentclass[../AppuntiStruttura]{subfiles}
+
+
+\begin{document}
+	\section*{Lezione 9, 22 Marzo 2018}
+		Il principio di Pauli, per il quale particelle identiche non possono essere identificate dagli stessi numeri quantici, è equivalente alla richiesta di una particolare simmetria nella funzione d'onda. Storicamente quello che è nato prima è il principio di esclusione di Pauli. I bosoni richiedono una funzione d'onda simmetrica dello scambio e i fermioni antisimmetriche. In modo fenomenologico si vede che i fermioni hanno spin semidispari metre i bosoni ce l'hanno intero.
+		
+		Per scrivere funzioni d'onda a molte particelle si è soliti utilizzare una base costituita da prodotti tensoriali di funzioni d'onda di singola particella. La nostra teoria si basa sul fatto che l'errore che commettiamo con questa descrizione è piccola. In generale dunque scriviamo la funzione dìonda di molte particelle come una sommatoria di prodotti tensoriali di funzioni d'onda di singola particela. Questo ci permette con una certa liberta di considerare il sistema a due particelle come se fosse costituito da particelle indistinguibili ma con una loro indicitualità. In realtà non è proprio così, le particelle sono indistinguibili e non è possibile definire la prima o la seconda particella. Si scrive dunque:
+		\begin{gather}
+		\label{eqn:scomp}
+		\Psi(\vec{r}_{1},\vec{r}_{2})=\psi_{1}(\vec{r}_{1})+\psi_{2}(\vec{r}_{2})		
+		\end{gather}
+		In generale l'hamiltoniana sarebbe:
+		\begin{gather}
+		H=\sum_{j=1}^{N}\left[\dfrac{p_{j}^{2}}{2m_{j}}-\dfrac{Ze_{0}^{2}}{r_{j}}\right] +\sum_{i<j}\dfrac{e^{2}}{r_{ij}}
+		\end{gather}
+		Tuttaia consideriamo l'ultimo termine, quello di interazione tra gli elettroni coome se fosse trascurabile. Quindi scriviamo l'hamiltoniana come somma di energia cinetica e potenziale della singola particella. A qesto punto la \ref{eqn:scomp} non è più un'approssimazione ma è una soluzione esatta: l'Hamiltoniana pu indatti essere completamente separata nelle sue variabili. Partendo da quest'approssimazione viene naturale sviluppare le funzioni d'onda a più particelle come prodotti di funzioni d'onda di particella singola. Vedremo in seguito dei modi migliori di approssimare il potenziale di singola particella per includere parzialmente anche l'effetto di un elettrone sull'altro. Abbiamo quindi due particelle, la prima nello stato fondamentalee della sua hamiltoniana e la seconda nello stato fondamentale della sua, che può equivalere a quello eccitato della prima in quanto queste non possono avere gli stessi numeri quantici. Scriviamo quindi le funzioni d'onda delle singole particelle come uno stato \emph{hydrogen-like}. In questo modo scriviamo:
+		\begin{gather}
+		\Psi_{\alpha_{1},\dots,\alpha_{n}}(\vec{r}_{1},\dots,\vec{r}_{n})=\prod_{k}^{n}\psi_{\alpha_{k}}(\vec{r}_{k})
+		\end{gather}
+		(in generale c'è anche la somma). Se le particelle sono fermioni (come nel nostro caso) allora è possibile esprimere òa funzione d'onda come un determinante, detto \emph{determinante di Slater}. Una funzioe scritta tramite determinante di Slater è completamente antisimmettrica per le proprietà del determinante. Se dovessimo prendere una coppia di $ \alpha_{i},\ \alpha_{j} $ uguale allora ci sarebbero due righe o colonne uguali. Nel caso dei bosoni va fato un calcolo di tipo diverso perché la funzione d'onda deve simmetrica. Cambia anche il termine moltiplicativo all'inizio ma noon lo citiamo. 
+		
+		Nel caso dell'atomo di Elio. L'amiltoniana è la particolarizzazione di quello che avevamo detto però per due solo elettroni. L'ultimo termine, di interazione elettrone elettrone per ora noi non lo consideriamo. Scriviamo quindi l'hamiltoniana come somma di due hamiltoniane separate con variabili separabili. Dunque ci sono due set di numeri quantici, cosa che non è ovvia perchP in un sistema a due particellee dovrebbe essercene uno solo per tutte e due le particelle. Nella nostra approssimazione lo interpretiamo come due set. Ora vediamo come costruire le funzioni d'onda con la corretta simmetria. Possiamo quindi scrivere che la funzione d'onda a due particelle $ \psi(r_{1},r_{2}) $ può essere cisrta come:
+		\begin{gather}
+		\Psi(r_{1},r_{2})=\dfrac{1}{\sqrt{2}}\left|\begin{array}{cc}
+		\psi_{nlm}(r_{1}) & \psi_{nlm}(r_{2}) \\ 
+		\psi_{n'l'm'}(r_{1}) & \psi_{n'l'm'}(r_{2})
+		\end{array} \right|
+		\end{gather}
+		Questa scruttyra però non è abbastanza general perché non include in modo generale anche lo spin. Si suppone dunque di poter separare la parte spinoriale con una nuova funzione $ \chi_{m_{s}}\left(\sigma\right) $. Perciò, nell'antisimmetrizzazione della funzione d'onda noi possiamo considerare l'antisimmetrizzazione della prima parte, quella contenente i numeri quantici \emph{classici}, oppure quella delle $ \chi $ detta parte di spin o spinoriale. La funzione d'onda deve complessivamente essere antisimmetrica quindi può essere o quella di spin antisimmetrica e quella orbitale simmetrica o viceversa. Consideriamo ora per esempio che la parte orbitale sia antisimmetrica. Se la parte orbitale fosse uguale per le due particelle, antisimmetrizzando la funzione d'onda diventa identicamente nulla. Questa è una situazione non fisica e quindi non la consideriamo. Allo stesso possiamo antisimmetrizzare la parte di spin.
+		
+		Pensiamo dunque agli elettroni come inclusi in un contesto atomico. Se tutti e due sono nella shell $ 1s $ allora la parte orbitale non può essere antisimmetrica, altrimenti la funzione d'onda si annullerebbe ovunque. Deve quindi essere antisimmetrica la parte spinoriale. Per gli stati in cui la parte orbitale è diversa non c'è problema a prenderne l'antisimmetrizzazione. La parte di spin può dunque essere sia simmetrica (di tripletto), quando si consideri quella orbitale antisimmetrica, sia antisimmetrica (di singoletto) quando si consideri quella orbitale simmetrica.
+		
+		Cerchiamo di correggere il problema dell'elio ad elettroni separati con una correzione perturbativa. Si vede che, facendo il valore atteso dell'hamiltoniana perturbata, per stati di singoletto, con spin antisismmetrico, l'energia viene somata ad una costante, per stati di tripletto invece viene sottratta. 
+\end{document}

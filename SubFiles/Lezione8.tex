@@ -1,0 +1,33 @@
+\documentclass[../AppuntiStruttura]{subfiles}
+
+
+\begin{document}
+	\section*{Lezione 8, 21 Marzo 2018, Esercirtazione}
+	\begin{exe}[8 aprile 2014]
+		In the standard treatment of the Hydrogen atom, it is assumed that, the core is a point charge with a potential energy:
+		\begin{gather}
+		V_{coul}=-\dfrac{e^{2}}{r^{2}}
+		\end{gather}
+		But in reality the nucleushas a finite size, and can be approzimated as a uniform sphere with radius $ r_{n}\approx\SI{0.9}{\femto\meter} $. The potential energy for this is fiven by:
+		\begin{gather}
+		V_{true}=\begin{cases}
+		-\dfrac{3e^{2}}{2r_{n}}+\dfrac{e^{2}r^{2}}{2r_{n}^{3}}\quad \text{Inside the nucleus}\\
+		-\dfrac{e^{2}}{r^{2}}\quad\text{Outside the nucleus}
+		\end{cases}
+		\end{gather}
+		Evaluate the first order perturbation of that energy change for a hydrogen atom in the ground level. We are going to use the fact that:
+		\begin{gather}
+		\exp(x)\approx 1,\quad x<<1
+		\end{gather}
+	\end{exe}
+	\begin{sol}
+		We are going to work with the hydrogen atom solution at the ground level. Because this has zero anguylar momentum it does not have an angular dependance. We are going to calculate the perturbation. To do so, we need to measure $ \Delta E $, the difference between the perturbed and unperturbed equation. We have:
+		\begin{gather}
+		\Delta E = \bra{1,0,0}\Delta V\ket{1,0,0}=\int_{0}^{\infty}\left(-V_{coul}+V_{true}(r)\right)\left(R_{10}(r)\right)^{2}r^{2}dr
+		\end{gather}
+		$ \Delta V $ is nonzero only inside the nucleus, there we have:
+		\begin{gather}
+			\int_{0}^{\infty}\left(-V_{coul}+V_{true}(r)\left(R_{10}(r)\right)\right)^{2}r^{2}dr
+		\end{gather}
+	\end{sol}
+ \end{document}
